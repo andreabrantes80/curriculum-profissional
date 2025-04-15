@@ -1,4 +1,4 @@
-body, html{
+body, html {
     height: 100%;
     margin: 0;
     padding: 10px;
@@ -10,89 +10,159 @@ body, html{
     background: #f4f4f4;
 }
 
-.curriculo{
+.curriculo {
     display: flex;
-    width: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 1200px; /* Limita a largura máxima em telas grandes */
     min-height: 80vh;
     color: #333;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin-top: 10px;
 }
 
-.painel-esquerdo{
+.painel-esquerdo {
     background-color: #032941;
     color: white;
-    padding: 40px;
+    padding: 2rem; /* Unidade relativa */
     width: 35%;
 }
 
-.painel-direito{
+.painel-direito {
     background-color: #f0f0f0;
     color: #333;
-    padding: 40px;
+    padding: 2rem;
     width: 65%;
 }
 
-.perfil img{
-    width: 100px;
-    height: 100px;
+.perfil img {
+    width: 6rem; /* Tamanho relativo */
+    height: 6rem;
     border-radius: 50%;
-    margin-top: 90px;
-    margin-bottom: 20px;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
 }
 
-.perfil h1{
-    font-size: 24px;
+.perfil h1 {
+    font-size: 1.5rem; /* Tamanho relativo */
     margin: 0;
 }
 
 .perfil p {
-    font-size: 18px;
+    font-size: 1.1rem;
     margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
 }
 
-.informacoes-contato h2, .habilidades h2, .experiencia h2, .educacao h2{
-    font-size: 20px;
+.informacoes-contato h2, .habilidades h2, .experiencia h2, .educacao h2 {
+    font-size: 1.25rem;
     border-bottom: 2px solid white;
-    padding-bottom: 10px;
-    margin-top: 40px;
+    padding-bottom: 0.5rem;
+    margin-top: 2rem;
     display: flex;
     align-items: center;
 }
 
-.informacoes-contato h2 i, .habilidades h2 i, .experiencia h2 i, .educacao h2 i{
-    margin-right: 10px;
+.informacoes-contato h2 i, .habilidades h2 i, .experiencia h2 i, .educacao h2 i {
+    margin-right: 0.5rem;
 }
 
-.informacoes-contato ul, .habilidade ul{
+.informacoes-contato ul, .habilidade ul {
     list-style-type: none;
     padding: 0;
 }
 
-.informacoes-contato li, .habilidade li{
-    font-size: 16px;
+.informacoes-contato li, .habilidade li {
+    font-size: 1rem;
     line-height: 1.8;
-    margin-bottom: 10px;
-
+    margin-bottom: 0.5rem;
 }
 
-.experiencia h2{
-    font-size: 20px;
+.experiencia h2 {
+    font-size: 1.25rem;
     border-bottom: 2px solid #cccccc;
-    padding-bottom: 10px;
-    margin-top: 40px;
+    padding-bottom: 0.5rem;
+    margin-top: 2rem;
     display: flex;
     align-items: center;
 }
 
-.experiencia p{
-   margin: 20px 0;
-   line-height: 1.5;
-   font-size: 16px;
-
+.experiencia p {
+    margin: 1rem 0;
+    line-height: 1.5;
+    font-size: 1rem;
 }
 
- .fa-project-diagram, .fa-certificate, .fa-trophy{
-    margin-right: 10px;
+.fa-project-diagram, .fa-certificate, .fa-trophy {
+    margin-right: 0.5rem;
+}
+
+/* Media Query para tablets (abaixo de 768px) */
+@media (max-width: 768px) {
+    .curriculo {
+        flex-direction: column; /* Empilha os painéis */
+    }
+
+    .painel-esquerdo, .painel-direito {
+        width: 100%; /* Ocupa toda a largura */
+        padding: 1.5rem;
+    }
+
+    .perfil img {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .perfil h1 {
+        font-size: 1.3rem;
+    }
+
+    .perfil p {
+        font-size: 1rem;
+    }
+
+    .informacoes-contato h2, .habilidades h2, .experiencia h2, .educacao h2 {
+        font-size: 1.1rem;
+    }
+
+    .informacoes-contato li, .habilidade li, .experiencia p {
+        font-size: 0.9rem;
+    }
+}
+
+/* Media Query para celulares pequenos (abaixo de 480px) */
+@media (max-width: 480px) {
+    body, html {
+        padding: 5px; /* Reduz padding em telas pequenas */
+    }
+
+    .curriculo {
+        margin-top: 5px;
+    }
+
+    .painel-esquerdo, .painel-direito {
+        padding: 1rem;
+    }
+
+    .perfil img {
+        width: 4rem;
+        height: 4rem;
+        margin-top: 1rem;
+    }
+
+    .perfil h1 {
+        font-size: 1.1rem;
+    }
+
+    .perfil p {
+        font-size: 0.9rem;
+    }
+
+    .informacoes-contato h2, .habilidades h2, .experiencia h2, .educacao h2 {
+        font-size: 1rem;
+    }
+
+    .informacoes-contato li, .habilidade li, .experiencia p {
+        font-size: 0.85rem;
+    }
 }
